@@ -1,0 +1,28 @@
+{
+  "name": "boighor",
+  "version": "1.0.0",
+  "description": "lorem ipsum dolar sit amet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joshimcse/BoiGhor.git"
+  },
+  "keywords": [
+    "boi",
+    "ghor",
+    "ecommerce",
+    "nodejs",
+    "react",
+    "mongodb",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joshimcse/BoiGhor/issues"
+  },
+  "homepage": "https://github.com/Joshimcse/BoiGhor#readme"
+}
