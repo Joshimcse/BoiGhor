@@ -23,6 +23,7 @@ const bookSchema = new Schema({
     {
       type: Schema.Types.ObjectId,
       ref: 'Category',
+      required: true,
     },
   ],
   authors: [
@@ -62,6 +63,18 @@ const bookSchema = new Schema({
   region: {
     type: String,
     default: 'বাংলাদেশ',
+  },
+  isPublished: {
+    type: Boolean,
+    required: true,
+  },
+  stock: {
+    type: Number,
+    default: 0,
+  },
+  sold: {
+    type: Number,
+    default: 0,
   },
 });
 
