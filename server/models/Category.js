@@ -4,11 +4,11 @@ const Schema = mongoose.Schema;
 const categorySchema = new Schema({
   name: {
     type: String,
-    required: true,
+    required: true
   },
   rank: {
-    type: Number,
-  },
+    type: Number
+  }
 });
 
 module.exports = mongoose.model('Category', categorySchema);

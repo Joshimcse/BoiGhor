@@ -5,62 +5,62 @@ const orderSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
     ref: 'User',
-    required: true,
+    required: true
   },
   books: [
     {
       book: {
         type: Schema.Types.ObjectId,
         ref: 'Book',
-        required: true,
+        required: true
       },
       quantity: {
         type: Number,
-        default: 1,
-      },
-    },
+        default: 1
+      }
+    }
   ],
   vat: {
     type: Number,
-    required: true,
+    required: true
   },
   totalPrice: {
     type: Number,
-    required: true,
+    required: true
   },
   paymentType: {
     type: String,
-    required: true,
+    required: true
   },
   shippingAdress: {
     name: {
       type: String,
-      required: true,
+      required: true
     },
     email: {
-      type: String,
+      type: String
     },
     phone: {
       type: String,
-      required: true,
+      required: true
     },
     address: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
   isShipped: {
     type: Boolean,
-    default: false,
+    default: false
   },
   isCancelOrder: {
     type: Boolean,
-    default: false,
+    default: false
   },
   Date: {
     type: Date,
-    default: Date.now,
-  },
+    default: Date.now
+  }
 });
 
 module.exports = mongoose.model('Order', orderSchema);

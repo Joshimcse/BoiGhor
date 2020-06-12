@@ -35,12 +35,12 @@ app.use(cookieParser());
 // listen for request
 const port = process.env.PORT || 3007;
 app.listen(port, () => {
-  console.log(`Magic happens on port ${port}`)
+  console.log(`Magic happens on port ${port}`);
   // MongoDB configuration
   mongoose.Promise = global.Promise;
   mongoose.connect(
     process.env.MLAB_URI,
-    { useNewUrlParser: true , useUnifiedTopology: true},
+    { useNewUrlParser: true, useUnifiedTopology: true },
     (err, res) => {
       if (err) console.error(err);
       else console.log('Connected to Database');

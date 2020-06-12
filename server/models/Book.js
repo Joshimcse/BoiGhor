@@ -4,78 +4,78 @@ const Schema = mongoose.Schema;
 const bookSchema = new Schema({
   title: {
     type: String,
-    required: true,
+    required: true
   },
   price: {
     type: Number,
-    required: true,
+    required: true
   },
   desc: {
     type: String,
     required: true,
-    default: 'lorem ipsum dolar sit amet',
+    default: 'lorem ipsum dolar sit amet'
   },
   discount: {
     type: Number,
-    default: 0,
+    default: 0
   },
   categories: [
     {
       type: Schema.Types.ObjectId,
       ref: 'Category',
-      required: true,
-    },
+      required: true
+    }
   ],
   authors: [
     {
       type: Schema.Types.ObjectId,
       ref: 'Author',
-      required: true,
-    },
+      required: true
+    }
   ],
   publisher: {
     type: Schema.Types.ObjectId,
     ref: 'Publisher',
-    required: true,
+    required: true
   },
   isbn: {
     type: String,
-    default: '',
+    default: ''
   },
   edition: {
     published: {
       type: String,
-      default: '',
+      default: ''
     },
     publishedYear: {
       type: Stringk,
-      default: '',
-    },
+      default: ''
+    }
   },
   numOfPage: {
     type: Number,
-    required: true,
+    required: true
   },
   lang: {
     type: String,
-    default: 'বাংলা',
+    default: 'বাংলা'
   },
   region: {
     type: String,
-    default: 'বাংলাদেশ',
+    default: 'বাংলাদেশ'
   },
   isPublished: {
     type: Boolean,
-    required: true,
+    required: true
   },
   stock: {
     type: Number,
-    default: 0,
+    default: 0
   },
   sold: {
     type: Number,
-    default: 0,
-  },
+    default: 0
+  }
 });
 
 module.exports = mongoose.model('Book', bookSchema);

@@ -4,17 +4,17 @@ const Schema = mongoose.Schema;
 const authorSchema = new Schema({
   name: {
     type: String,
-    required: true,
+    required: true
   },
   desc: {
     type: String,
-    default: '',
+    default: ''
   },
   dateOfBirth: {
     type: String,
-    default: '',
+    default: ''
   },
-  books: [{ type: Schema.Types.ObjectId, ref: 'Book' }],
+  books: [{ type: Schema.Types.ObjectId, ref: 'Book' }]
 });
 
 module.exports = mongoose.model('Publisher', publisherSchema);
