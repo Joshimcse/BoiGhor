@@ -1,3 +1,11 @@
+/**
+ * User.js
+ *
+ * @module      :: Model
+ * @description :: Represent data model for the Users
+ * @author		  :: Joshim Uddin
+ */
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -28,9 +36,10 @@ const userSchema = new Schema({
       required: true,
     },
     address: {
+      division: { type: String, required: true },
       district: { type: String, required: true },
-      upzila: { type: String, required: true },
-      local: { type: String, required: true },
+      thana: { type: String, required: true },
+      localArea: { type: String, required: true },
     },
   },
   cart: {
@@ -40,6 +49,11 @@ const userSchema = new Schema({
   history: {
     type: Array,
     default: [],
+  },
+  modify: [{ type: Date, default: Date.now }],
+  Date: {
+    type: Date,
+    default: Date.now,
   },
 });
 
