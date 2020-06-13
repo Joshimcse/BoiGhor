@@ -6,7 +6,6 @@
  */
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 
 // set up express app
@@ -25,10 +24,14 @@ app.use(express.json());
 // parse cookies
 app.use(cookieParser());
 
-// initialize users routes
-// app.use('/api/users', require('./routes/userRoutes'));
-// initialize foods routes
-// app.use('/api/foods', require('./routes/foodRoutes'));
+// connect to the users routes
+app.use('/api/users', require('./routes/userRoutes'));
+// connect to the books routes
+app.use('/api/books', require('./routes/bookRoutes'));
+// connect to the authors routes
+app.use('/api/authors', require('./routes/authorRoutes'));
+// // connect to the publishers routes
+app.use('/api/publishers', require('./routes/publisherRoutes'));
 
 // Error handling Middleware
 
