@@ -17,7 +17,7 @@ const bookSchema = new Schema({
   },
   discount: {
     type: Number,
-    default: 0
+    default: NaN
   },
   categories: [
     {
@@ -42,14 +42,14 @@ const bookSchema = new Schema({
     type: String,
     default: ''
   },
-  edition: {
-    published: {
-      type: String,
-      default: ''
+  published: {
+    version: {
+      type: Number,
+      default: NaN
     },
-    publishedYear: {
-      type: Stringk,
-      default: ''
+    Year: {
+      type: Number,
+      default: NaN
     }
   },
   numOfPage: {
@@ -70,11 +70,16 @@ const bookSchema = new Schema({
   },
   stock: {
     type: Number,
-    default: 0
+    default: NaN
   },
   sold: {
     type: Number,
-    default: 0
+    default: NaN
+  },
+  remark: {
+    type: String,
+    default: '',
+    required: true
   }
 });
 

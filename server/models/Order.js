@@ -49,13 +49,24 @@ const orderSchema = new Schema({
       required: true
     }
   },
+  isPaid: {
+    type: Boolean,
+    default: false,
+    required: true
+  },
   isShipped: {
     type: Boolean,
-    default: false
+    default: false,
+    required: true
   },
   isCancelOrder: {
     type: Boolean,
     default: false
+  },
+  remark: {
+    type: String,
+    default: '',
+    required: true
   },
   Date: {
     type: Date,

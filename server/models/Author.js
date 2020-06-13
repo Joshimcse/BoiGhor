@@ -14,7 +14,12 @@ const authorSchema = new Schema({
     type: String,
     default: ''
   },
-  books: [{ type: Schema.Types.ObjectId, ref: 'Book' }]
+  books: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Book'
+    }
+  ]
 });
 
-module.exports = mongoose.model('Publisher', publisherSchema);
+module.exports = mongoose.model('Author', authorSchema);

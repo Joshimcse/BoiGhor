@@ -50,7 +50,12 @@ const userSchema = new Schema({
     type: Array,
     default: []
   },
-  modify: [{ type: Date, default: Date.now }],
+  modifies: [
+    {
+      type: Date,
+      default: Date.now
+    }
+  ],
   Date: {
     type: Date,
     default: Date.now
