@@ -3,8 +3,14 @@ const Schema = mongoose.Schema;
 
 const publisherSchema = new Schema({
   name: {
-    type: String,
-    required: true
+    en: {
+      type: String,
+      required: true
+    },
+    bn: {
+      type: String,
+      required: true
+    }
   },
   desc: {
     type: String,
