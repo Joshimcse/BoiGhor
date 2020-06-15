@@ -58,11 +58,11 @@ const bookSchema = new Schema({
   },
   lang: {
     type: String,
-    default: 'বাংলা'
+    default: 'bn'
   },
   region: {
     type: String,
-    default: 'বাংলাদেশ'
+    default: 'bd'
   },
   isPublished: {
     type: Boolean,

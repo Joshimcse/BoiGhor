@@ -3,8 +3,14 @@ const Schema = mongoose.Schema;
 
 const authorSchema = new Schema({
   name: {
-    type: String,
-    required: true
+    en: {
+      type: String,
+      required: true
+    },
+    bn: {
+      type: String,
+      required: true
+    }
   },
   desc: {
     type: String,
@@ -14,12 +20,7 @@ const authorSchema = new Schema({
     type: String,
     default: ''
   },
-  books: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Book'
-    }
-  ]
+  books: [{ type: Schema.Types.ObjectId, ref: 'Book' }]
 });
 
 module.exports = mongoose.model('Author', authorSchema);

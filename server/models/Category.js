@@ -3,8 +3,14 @@ const Schema = mongoose.Schema;
 
 const categorySchema = new Schema({
   title: {
-    type: String,
-    required: true
+    en: {
+      type: String,
+      required: true
+    },
+    bn: {
+      type: String,
+      required: true
+    }
   },
   rank: {
     type: Number,
