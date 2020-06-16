@@ -17,20 +17,18 @@ const bookSchema = new Schema({
   },
   discount: {
     type: Number,
-    default: NaN
+    default: 0
   },
   categories: [
     {
       type: Schema.Types.ObjectId,
       ref: 'Category',
-      required: true
     }
   ],
   authors: [
     {
       type: Schema.Types.ObjectId,
       ref: 'Author',
-      required: true
     }
   ],
   publisher: {
@@ -45,41 +43,46 @@ const bookSchema = new Schema({
   published: {
     version: {
       type: Number,
-      default: NaN
+      default: 1
     },
     Year: {
       type: Number,
-      default: NaN
+      default: 1955
     }
   },
   numOfPage: {
     type: Number,
+    default: 0,
     required: true
   },
   lang: {
     type: String,
-    default: 'bn'
+    default: 'bn',
+    required: true
   },
   region: {
     type: String,
-    default: 'bd'
+    default: 'bd',
+    required: true
   },
   isPublished: {
     type: Boolean,
+    default: true,
     required: true
   },
   stock: {
     type: Number,
-    default: NaN
+    default: 1,
+    required: true
   },
   sold: {
     type: Number,
-    default: NaN
+    default: 0,
+    required: true
   },
   remark: {
     type: String,
-    default: '',
-    required: true
+    default: ''
   }
 });
 

@@ -30,8 +30,11 @@ app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/books', require('./routes/bookRoutes'));
 // connect to the authors routes
 app.use('/api/authors', require('./routes/authorRoutes'));
-// // connect to the publishers routes
+// connect to the publishers routes
 app.use('/api/publishers', require('./routes/publisherRoutes'));
+
+// temporary admin routes
+app.use('/api/admin', require('./routes/adminRoutes'));
 
 // Error handling Middleware
 
