@@ -25,13 +25,13 @@ app.use(express.json());
 app.use(cookieParser());
 
 // connect to the users routes
-app.use('/api/users', require('./routes/userRoutes'));
+app.use('/api/users', require('./routes/user.routes'));
 // connect to the books routes
-app.use('/api/books', require('./routes/bookRoutes'));
+app.use('/api/books', require('./routes/book.routes'));
 // connect to the authors routes
-app.use('/api/authors', require('./routes/authorRoutes'));
+app.use('/api/authors', require('./routes/author.routes'));
 // connect to the publishers routes
-app.use('/api/publishers', require('./routes/publisherRoutes'));
+app.use('/api/publishers', require('./routes/publisher.routes'));
 
 // temporary admin routes
 app.use('/api/admin', require('./routes/adminRoutes'));

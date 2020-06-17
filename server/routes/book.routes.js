@@ -34,6 +34,7 @@ router.get('/:id', (req, res) => {});
  *         then produces categories wise books and Default array size is 12
  * @access Public
  */
-router.get('/', (req, res) => {});
+router.get('/', (req, res) => {
+});
 
 module.exports = router;
