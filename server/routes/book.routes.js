@@ -1,3 +1,5 @@
+const {booksController} = require('../controllers/book.controllers');
+
 const router = require('express').Router();
 
 /**
@@ -34,7 +36,6 @@ router.get('/:id', (req, res) => {});
  *         then produces categories wise books and Default array size is 12
  * @access Public
  */
-router.get('/', (req, res) => {
-});
+router.get('/', booksController);
 
 module.exports = router;
